@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
+// Global Styles
+.App {
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.3s;
+  a {
+    color: rgb(9, 147, 211);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+// Themes
+
+.dark {
+  color: $dark-page-text;
+  background: $dark-page-background;
+}
+  
+  
+.light {
+  color: $light-page-text;
+  background: $light-page-background;
+}
