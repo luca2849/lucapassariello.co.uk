@@ -27,6 +27,7 @@ const Navbar = ({ changeHandler, theme }) => {
 						onChange={(e) => onChange(e)}
 						checked={theme === "dark"}
 						onColor="#3590FF"
+						activeBoxShadow="none"
 						checkedIcon={
 							<div
 								style={{

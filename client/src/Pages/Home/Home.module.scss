@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+
+.section {
+    .textblock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: justify;
+        width: 800px;
+        margin: 0 auto;
+        & > p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.inner {
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+    & > img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.clipped {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    background: $highlight;
+    padding: 2rem 0 15rem 0;
+    & > .inner {
+        color: white;
+    }
+}
+
+.skills {
+    margin-top: -10rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & > .skill {
+        height: 600px;
+        width: 400px;
+        margin: 0.5rem;
+        background: $light-page-background;
+        box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+}
