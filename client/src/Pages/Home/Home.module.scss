@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5rem 0;
+    margin: 3rem 0;
     & > img {
         width: 250px;
         height: 250px;
@@ -43,18 +43,84 @@
 }
 
 .skills {
-    margin-top: -10rem;
+    margin: -10rem auto 0 auto;
     position: relative;
     z-index: 10;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    color: $light-page-text;
+    max-width: 1500px;
     & > .skill {
         height: 600px;
-        width: 400px;
-        margin: 0.5rem;
+        width: 30%;
+        margin: 1rem;
         background: $light-page-background;
         box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
+        position: relative;
+        & > .skillHeader {
+            padding-top: 1rem;
+            & > .icon {
+                display:  flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 5rem;
+            }
+            &:after {
+                content: "";
+                width: 50%;
+                margin: 0 auto 1rem auto;
+                height: 2px;
+                background: $highlight;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        & > .skillText {
+            padding: 1rem;
+            text-align: justify;
+            font-size: 1.1rem;
+            font-family: sans-serif;
+            & > p {
+                margin-bottom: 0.5rem;
+            }
+        }
+        & > .heading {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $highlight;
+        }
+        & > .list {
+            & ul {
+                list-style-type: none;
+                text-align: center;
+                padding: 0;
+                & li {
+                    margin: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+    .skills {
+        & > .skill {
+            width: 90%;
+        }
+    }
+    .inner {
+        width: 90%;
+    }
+    .section {
+        .textblock {
+            width: 100%;
+        }
     }
 }
