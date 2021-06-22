@@ -1,14 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
+import {useHistory} from "react-router-dom";
 
 import styles from "./Home.module.scss";
 
 import { BiServer, BiNetworkChart } from "react-icons/bi";
+import { FaTerminal, FaPencilRuler } from "react-icons/fa";
+import { GiBrain } from "react-icons/gi";
+import { RiMessage2Line } from "react-icons/ri";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
+import { VscChevronDown } from "react-icons/vsc";
+
 
 const Home = () => {
+	const contentRef = useRef(null);
+	const history = useHistory();
+
+	const handleScroll = () => {
+		contentRef.current.scrollIntoView();
+	};
+
+	const handleClick = (link) => history.push(link);
+
+	const buttons = [
+		{
+			name: "My Work",
+			icon: <FaTerminal />,
+			link: "/portfolio"
+		},
+		{
+			name: "My Skills",
+			icon: <GiBrain />,
+			link: "/skills"
+		},
+		{
+			name: "Contact Me",
+			icon: <RiMessage2Line />,
+			link: "/contact"
+		},
+		{
+			name: "My Notes",
+			icon: <FaPencilRuler />,
+			link: "/notes"
+		}
+	]
+
 	return (
 		<div className={styles.container}>
-			<section className={styles.section}>
+			<section className={`${styles.section} ${styles.first}`}>
 				<div className={styles.inner}>
 					<h1>Full Stack Dev, Designer, & Engineer</h1>
 					<h2>
@@ -18,9 +56,15 @@ const Home = () => {
 					<div className={styles.avatar}>
 						<img src="/img/avatar.svg" />
 					</div>
+					<div className={styles.down} onClick={() => handleScroll()}>
+						<VscChevronDown />
+					</div>
 				</div>
 			</section>
-			<section className={`${styles.section} ${styles.clipped}`}>
+			<section
+				className={`${styles.section} ${styles.clipped}`}
+				ref={contentRef}
+			>
 				<div className={styles.inner}>
 					<h3>A Bit About Me</h3>
 					<br />
@@ -64,7 +108,7 @@ const Home = () => {
 							</ul>
 						</div>
 						<div className={styles.heading}>
-							<p>My Tools</p>
+							<p>Used Tools</p>
 						</div>
 						<div className={styles.list}>
 							<ul>
@@ -96,7 +140,7 @@ const Home = () => {
 							</ul>
 						</div>
 						<div className={styles.heading}>
-							<p>My Tools</p>
+							<p>Used Tools</p>
 						</div>
 						<div className={styles.list}>
 							<ul>
@@ -125,14 +169,31 @@ const Home = () => {
 							</ul>
 						</div>
 						<div className={styles.heading}>
-							<p>My Tools</p>
+							<p>Used Tools</p>
 						</div>
 						<div className={styles.list}>
 							<ul>
 								<li>MobaXterm</li>
 								<li>PuTTY</li>
+								<li>UniFiOS</li>
 							</ul>
 						</div>
+					</div>
+				</div>
+			</section>
+			<section className={`${styles.section}`}>
+				<div className={styles.inner}>
+					<h3>More Information</h3>
+					<br />
+					<div className={styles.info}>
+						{buttons.map((button, i) => (
+								<div className={styles.button} onClick={() => handleClick(button.link)}>
+									<div className={styles.icon}>
+										{button.icon}
+									</div>
+									<p>{button.name}</p>
+								</div>
+						))}
 					</div>
 				</div>
 			</section>

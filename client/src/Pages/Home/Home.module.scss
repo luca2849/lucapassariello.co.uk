@@ -6,11 +6,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        text-align: justify;
+        text-align: center;
         width: 800px;
         margin: 0 auto;
-        & > p {
-            font-size: 1.2rem;
+
+        &>p {
+            font-size: 1.4rem;
+            line-height: 35px;
             margin-bottom: 1rem;
         }
     }
@@ -27,7 +29,8 @@
     align-items: center;
     justify-content: center;
     margin: 3rem 0;
-    & > img {
+
+    &>img {
         width: 250px;
         height: 250px;
     }
@@ -37,13 +40,52 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
     background: $highlight;
     padding: 2rem 0 15rem 0;
-    & > .inner {
+
+    &>.inner {
         color: white;
     }
 }
 
+.clippedAlt {
+    clip-path: polygon(0 43%, 100% 0, 100% 100%, 0 100%);
+    background: $highlight;
+    padding: 10rem 0 2rem 0;
+
+    &>.inner {
+        color: white;
+    }
+}
+
+.first {
+    height: calc(100vh - 98px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.down {
+    margin-top: 5rem;
+    transition: all 0.3s;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &>svg {
+        transform: scale(4);
+    }
+
+    &:hover {
+        cursor: pointer;
+        animation: bounce 0.5s;
+        animation-iteration-count: 1;
+        top: 71%;
+    }
+}
+
+
 .skills {
-    margin: -10rem auto 0 auto;
+    margin: -7.5rem auto 0 auto;
     position: relative;
     z-index: 10;
     display: flex;
@@ -51,7 +93,8 @@
     justify-content: center;
     color: $light-page-text;
     max-width: 1500px;
-    & > .skill {
+
+    &>.skill {
         height: 600px;
         width: 30%;
         margin: 1rem;
@@ -59,14 +102,17 @@
         box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
         position: relative;
-        & > .skillHeader {
+
+        &>.skillHeader {
             padding-top: 1rem;
-            & > .icon {
-                display:  flex;
+
+            &>.icon {
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 font-size: 5rem;
             }
+
             &:after {
                 content: "";
                 width: 50%;
@@ -78,16 +124,19 @@
                 transform: translateX(-50%);
             }
         }
-        & > .skillText {
+
+        &>.skillText {
             padding: 1rem;
             text-align: justify;
             font-size: 1.1rem;
             font-family: sans-serif;
-            & > p {
+
+            &>p {
                 margin-bottom: 0.5rem;
             }
         }
-        & > .heading {
+
+        &>.heading {
             text-align: center;
             font-size: 1.2rem;
             margin-top: 2rem;
@@ -95,11 +144,13 @@
             text-transform: uppercase;
             color: $highlight;
         }
-        & > .list {
+
+        &>.list {
             & ul {
                 list-style-type: none;
                 text-align: center;
                 padding: 0;
+
                 & li {
                     margin: 0.5rem;
                 }
@@ -108,19 +159,78 @@
     }
 }
 
+.info {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>.button {
+        flex: 1 1 34%;
+        font-size: 1.5rem;
+        background: linear-gradient(to right, $highlight, $highlight);
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        margin: 1rem;
+        padding: 4rem 0;
+        border: 5px solid $highlight;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s 0s;
+
+        &>.icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        &:hover {
+            background-size: 100% 100%;
+            cursor: pointer;
+            color: $dark-page-text;
+        }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 70%;
+    }
+
+    50% {
+        top: 72%;
+    }
+
+    100% {
+        top: 71%;
+    }
+}
 
 @media (max-width: $breakpoint-tablet) {
     .skills {
-        & > .skill {
+        &>.skill {
             width: 90%;
         }
     }
+
     .inner {
         width: 90%;
     }
+
     .section {
         .textblock {
             width: 100%;
         }
     }
+
+    .info {
+        &>.button {
+            flex: 1 1 100%;
+        }
+    }
+
+    .down {
+        display: none;
+    }
+
 }
