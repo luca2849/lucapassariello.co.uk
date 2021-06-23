@@ -4,7 +4,8 @@
         "link": "https://old.lucapassariello.co.uk",
         "cleanLink": "old.lucapassariello.co.uk",
         "desc": "My previous web development portfolio.",
-        "img": "lucapassariello.png"
+        "img": "lucapassariello.png",
+        "tech": ["PHP", "Twig"]
     },
     {
         "name": "Wikiraces",
@@ -12,7 +13,8 @@
         "cleanLink": "wikiraces.lucapassariello.co.uk",
         "desc": "A site for creating and playing Wikipedia races.",
         "img": "wikiraces.png",
-        "github": "https://github.com/luca2849/wikiraces.lucapassariello.co.uk"
+        "github": "https://github.com/luca2849/wikiraces.lucapassariello.co.uk",
+        "tech": ["NodeJS", "EJS", "SocketIO", "MongoDB"]
     },
     {
         "name": "Pathfinding",
@@ -20,22 +22,25 @@
         "cleanLink": "pathfinding.lucapassariello.co.uk",
         "desc": "A small A* path finding p5js implementation. This is a completely static implementation with no back-end, and is meant to demonstrate the applications of theory and algorithms. \n This site is live, and the GitHub repository is publically available.",
         "img": "pathfinding.png",
-        "github": "https://github.com/luca2849/astar-pathfinding"
+        "github": "https://github.com/luca2849/astar-pathfinding",
+        "tech": ["p5.js"]
     },
     {
         "name": "MySpotifyStats",
-        "link": "https://myspotifystats.lucapassariello.co.uk",
-        "cleanLink": "myspotifystats.lucapassariello.co.uk",
+        "link": "https://myspotifystats.com",
+        "cleanLink": "myspotifystats.com",
         "desc": "A website for checking various features of a Spotify account, using the Spotify API.",
         "img": "myspotifystats.png",
-        "github": "https://github.com/luca2849/myspotifystats.com"
+        "github": "https://github.com/luca2849/myspotifystats.com",
+        "tech": ["Python Flask", "Jinja"]
     },
     {
         "name": "Victoria Nursery",
         "link": "https://victorianursery.org",
         "cleanLink": "victorianursery.org",
         "desc": "Website for a small nursery based in Penarth.",
-        "img": "victorianursery.png"
+        "img": "victorianursery.png",
+        "tech": ["NodeJS", "Pug"]
     },
     {
         "name": "React Roulette",
@@ -43,13 +48,15 @@
         "cleanLink": "roulette-demo.lucapassariello.co.uk",
         "desc": "A proof-of-concept React application for playing a static roulette game.",
         "img": "roulette-demo.png",
-        "github": "https://github.com/luca2849/react-roulette"
+        "github": "https://github.com/luca2849/react-roulette",
+        "tech": ["React"]
     },
     {
         "name": "Projects Site",
         "link": "https://projects.lucapassariello.co.uk",
         "cleanLink": "projects.lucapassariello.co.uk",
         "desc": "A website containing information about my projects, including technologies used.",
-        "img": "projects.jpg"
+        "img": "projects.jpg",
+        "tech": ["React", "NextJS", "MySQL"]
     }
 ]

@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "./Project.module.scss";
 
+import oxford from "../../util/oxford";
+
 import {AiOutlineDesktop, AiFillGithub} from "react-icons/ai";
 
 const Project = ({project, index}) => {
@@ -8,6 +10,9 @@ const Project = ({project, index}) => {
     const handleClick = (link) => {
         window.open(link, '_blank');
     }
+
+    const techString = project.tech && oxford(project.tech, "and");
+
     return (
         <div index={index} className={styles.project}>
             <div className={styles.image}>
@@ -18,6 +23,11 @@ const Project = ({project, index}) => {
                 <div className={styles.description}>
                     {description.map((desc) => <p>{desc}</p>)}
                 </div>
+                {project.tech && 
+                    <div className={styles.tech}>
+                        <p>Some key technologies used in this application include: <b>{techString}</b></p>
+                    </div>
+                }
                 <div className={styles.links}>
                     <div className={styles.linkButton} onClick={() => handleClick(project.link)}>
                         <AiOutlineDesktop />

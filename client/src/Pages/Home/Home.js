@@ -183,7 +183,7 @@ const Home = () => {
 			</section>
 			<section className={`${styles.section}`}>
 				<div className={styles.inner}>
-					<h3>More Information</h3>
+					<h3>Want to Know More?</h3>
 					<br />
 					<div className={styles.info}>
 						{buttons.map((button, i) => (
