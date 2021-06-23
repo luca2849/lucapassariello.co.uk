@@ -1,0 +1,36 @@
+import React from 'react'
+import styles from "./Project.module.scss";
+
+import {AiOutlineDesktop, AiFillGithub} from "react-icons/ai";
+
+const Project = ({project, index}) => {
+    const description = project.desc.split("\n");
+    const handleClick = (link) => {
+        window.open(link, '_blank');
+    }
+    return (
+        <div index={index} className={styles.project}>
+            <div className={styles.image}>
+                <img src={`/img/${project.img}`} />
+            </div>
+            <div className={styles.info}>
+                <h3>{project.name}</h3>
+                <div className={styles.description}>
+                    {description.map((desc) => <p>{desc}</p>)}
+                </div>
+                <div className={styles.links}>
+                    <div className={styles.linkButton} onClick={() => handleClick(project.link)}>
+                        <AiOutlineDesktop />
+                    </div>
+                    {project.github && 
+                        <div className={styles.linkButton} onClick={() => handleClick(project.github)}>
+                            <AiFillGithub />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Project

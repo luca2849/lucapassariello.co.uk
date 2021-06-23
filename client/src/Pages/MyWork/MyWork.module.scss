@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .container {
+        width: 100%;
+    }
+}

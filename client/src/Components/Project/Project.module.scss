@@ -1,0 +1,101 @@
+@import '../../styles/variables.scss';
+
+.project {
+    margin: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .2), 0 15px 40px rgba(166, 173, 201, .3);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: $light-page-background;
+    color: $light-page-text;
+
+    &>.info {
+        flex: 1 1 55%;
+        line-height: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &>.description>p {
+            &:not(:first-of-type) {
+                margin-top: 1rem;
+            }
+        }
+
+        &>h3 {
+            text-align: left;
+        }
+
+        &>.links {
+            display: flex;
+            margin-top: auto;
+
+            &>div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(to bottom right, $highlight, $highlight);
+                background-size: 0% 100%;
+                background-repeat: no-repeat;
+                padding: 0.5rem;
+                border: 2px solid $dark-page-background;
+                border-radius: 10px;
+                height: 50px;
+                width: 50px;
+                font-size: 2rem;
+                cursor: pointer;
+                margin: 1rem 1rem 0 0;
+                transition: all 0.25s;
+
+                &:hover {
+                    background-size: 100% 100%;
+                    border-color: $highlight;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &>.image {
+        flex: 1 1 40%;
+        margin: 1rem;
+
+        &>img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+    }
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+    .project {
+
+        &>.info {
+            flex: 0 0 100%;
+
+            &>.links {
+                &>div {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+
+        &>.image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+
+}
