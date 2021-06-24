@@ -1,0 +1,12 @@
+.frontEnd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &>* {
+        transform: scale(0.75);
+        margin: 0.5rem;
+    }
+}

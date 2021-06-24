@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    position: relative;
+    // position: relative;
     transform: matrix(1, 0, 0, 1, 0, 0);
     user-select: none;
     padding: 40px;
@@ -37,8 +37,9 @@
 .outer {
     overflow: hidden;
     margin: 0 auto;
-    border: 2px dotted red;
     position: relative;
+    border-radius: 10px;
+    padding: 1rem;
 }
 
 .carouselItem {
