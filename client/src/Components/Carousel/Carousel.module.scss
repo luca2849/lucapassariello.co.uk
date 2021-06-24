@@ -1,39 +1,68 @@
+@import '../../styles/variables.scss';
+
 .carousel {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     position: relative;
     transform: matrix(1, 0, 0, 1, 0, 0);
+    user-select: none;
+    padding: 40px;
 }
 
 .nav {
     display: flex;
     padding: 1rem;
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
 .button {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 5px;
     background: white;
-    border-radius: 50%;
-    margin: 0 1rem;
+    margin: 0 0.25rem;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.current {
+    background: $highlight;
+}
+
+.common {
+    background: #b0b0b0;
 }
 
 .outer {
     overflow: hidden;
-    max-width: 1000px;
     margin: 0 auto;
+    border: 2px dotted red;
+    position: relative;
 }
 
 .carouselItem {
     flex: 0 0 100%;
     overflow: auto;
-    width: 100%;
-    height: 40vh;
+
+    &:not(:first-of-type) {
+        margin-left: 80px;
+    }
 }
 
-// transition: all 7999ms cubic-bezier(0, 0, 0.28, 1) 0s; transform: matrix(1, 0, 0, 1, -6238.74, 0);
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.rightArrow {
+    right: 0;
+}
+
+.leftArrow {
+    left: 0;
+}
