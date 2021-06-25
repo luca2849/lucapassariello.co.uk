@@ -1,38 +1,7 @@
 @import '../../styles/variables.scss';
 
-.carousel {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    // position: relative;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    user-select: none;
-    padding: 40px;
-}
 
-.nav {
-    display: flex;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-}
 
-.button {
-    width: 30px;
-    height: 5px;
-    background: white;
-    margin: 0 0.25rem;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.current {
-    background: $highlight;
-}
-
-.common {
-    background: #b0b0b0;
-}
 
 .outer {
     overflow: hidden;
@@ -40,30 +9,59 @@
     position: relative;
     border-radius: 10px;
     padding: 1rem;
-}
 
-.carouselItem {
-    flex: 0 0 100%;
-    overflow: auto;
+    & > .carousel {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        user-select: none;
+        padding: 40px;
 
-    &:not(:first-of-type) {
-        margin-left: 80px;
+        & > .carouselItem {
+            flex: 0 0 100%;
+            overflow: auto;
+        
+            &:not(:first-of-type) {
+                margin-left: 80px;
+            }
+        }
     }
-}
 
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
-}
+    & .nav {
+        display: flex;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
 
-.rightArrow {
-    right: 0;
-}
+        & > .button {
+            width: 30px;
+            height: 5px;
+            background: white;
+            margin: 0 0.25rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        & > .current {
+            background: $highlight;
+        }
+        
+        & > .common {
+            background: #b0b0b0;
+        }
+    }
 
-.leftArrow {
-    left: 0;
+    & .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10;
+
+        &.rightArrow {
+            right: 0;
+        }
+    }
 }
