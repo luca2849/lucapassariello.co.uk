@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import styles from "./Home.module.scss";
 
@@ -9,7 +9,6 @@ import { GiBrain } from "react-icons/gi";
 import { RiMessage2Line } from "react-icons/ri";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { VscChevronDown } from "react-icons/vsc";
-
 
 const Home = () => {
 	const contentRef = useRef(null);
@@ -25,24 +24,24 @@ const Home = () => {
 		{
 			name: "My Work",
 			icon: <FaTerminal />,
-			link: "/portfolio"
+			link: "/portfolio",
 		},
 		{
 			name: "My Skills",
 			icon: <GiBrain />,
-			link: "/skills"
+			link: "/skills",
 		},
 		{
 			name: "Contact Me",
 			icon: <RiMessage2Line />,
-			link: "/contact"
+			link: "/contact",
 		},
 		{
 			name: "My Notes",
 			icon: <FaPencilRuler />,
-			link: "/notes"
-		}
-	]
+			link: "/notes",
+		},
+	];
 
 	return (
 		<div className={styles.container}>
@@ -54,7 +53,7 @@ const Home = () => {
 						applications.
 					</h2>
 					<div className={styles.avatar}>
-						<img src="/img/avatar.svg" />
+						<img alt="avatar" src="/img/avatar.svg" />
 					</div>
 					<div className={styles.down} onClick={() => handleScroll()}>
 						<VscChevronDown />
@@ -187,12 +186,13 @@ const Home = () => {
 					<br />
 					<div className={styles.info}>
 						{buttons.map((button, i) => (
-								<div className={styles.button} onClick={() => handleClick(button.link)}>
-									<div className={styles.icon}>
-										{button.icon}
-									</div>
-									<p>{button.name}</p>
-								</div>
+							<div
+								className={styles.button}
+								onClick={() => handleClick(button.link)}
+							>
+								<div className={styles.icon}>{button.icon}</div>
+								<p>{button.name}</p>
+							</div>
 						))}
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-export default function(arr, conjunction){
+export default function oxford(arr, conjunction){
     let l = arr.length;
     if (l<2) return arr[0];
     if (l<3) return arr.join(` ${conjunction} `);
