@@ -8,7 +8,7 @@ import Skill from "../../Components/Skill/Skill";
 const MySkills = () => {
 	return (
 		<div>
-			<Carousel width={"80%"}>
+			<Carousel width={"60%"}>
 				<Carousel.Item>
 					<h3>Front-End</h3>
 					<div className={styles.frontEnd}>

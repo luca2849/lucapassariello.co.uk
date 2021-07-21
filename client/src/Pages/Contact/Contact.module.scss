@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+.textarea {
+    resize: none;
+    font-family: sans-serif;
+}
+
+.form {
+    width: 30%;
+    margin: 0 auto;
+    padding: 1rem;
+    & > *:focus {
+        outline: none; 
+    }
+
+    & > .formGroup {
+        width: 100%;
+        &:first-of-type {
+            display: flex;
+            justify-content: space-between;
+            & > input {
+                flex: 0 0 47.5%;
+            }
+        }
+        & > input, textarea {
+            font-size: 1.05rem;
+            width: 100%;
+            padding: 1rem 0.5rem;
+            box-sizing: border-box;
+            margin: 1rem 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            transition: all 0.4s;
+            &:not([type="submit"]) {
+                border: none;
+                border-bottom: 3px solid rgb(136, 136, 136);
+                background: rgb(250, 250, 250);
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                // On focus
+                &:focus {
+                    outline: none;
+                    border-bottom: 3px solid $highlight;
+                }
+                // Present and invalid input
+                &:not(:placeholder-shown):invalid {
+                    border-bottom: 3px solid red;
+                }
+                // Present and valid input
+                &:not(:placeholder-shown):valid {
+                    border-bottom: 3px solid green;
+                }
+            }
+            &[type="submit"] {
+                text-align: center;
+                background: white;
+                border: 3px solid $highlight;
+                color: $highlight;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+                font-weight: 500;
+                transition: all 0.3s;
+                &:hover {
+                    border: 2px solid transparent;
+                    background: $highlight;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .form {
+        width: 75%;
+        & > .formGroup {
+            &:first-of-type {
+                & > input {
+                    flex: 0 0 50%;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

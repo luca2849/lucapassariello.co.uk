@@ -8,6 +8,16 @@
         "tech": ["PHP", "Twig"]
     },
     {
+        "name": "MyBookChoice",
+        "link": "https://mybookchoice.lucapassariello.co.uk",
+        "cleanLink": "mybookchoice.lucapassariello.co.uk",
+        "desc": "My final year project. A fully-functional book recommender and social network. My reports, spreadsheets, and ethical approval are also available via the external link.",
+        "external": "https://pats.cs.cf.ac.uk/!archive_desc?p=1670",
+        "img": "mybookchoice.png",
+        "github": "https://github.com/luca2849/mybookchoice",
+        "tech": ["NodeJS", "React", "MongoDB", "SocketIO"]
+    },
+    {
         "name": "Wikiraces",
         "link": "https://wikiraces.lucapassariello.co.uk",
         "cleanLink": "wikiraces.lucapassariello.co.uk",

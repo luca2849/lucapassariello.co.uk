@@ -3,7 +3,7 @@ import styles from "./Project.module.scss";
 
 import oxford from "../../util/oxford";
 
-import { AiOutlineDesktop, AiFillGithub } from "react-icons/ai";
+import { AiOutlineDesktop, AiFillGithub, AiOutlineLink } from "react-icons/ai";
 
 const Project = ({ project, index }) => {
 	const description = project.desc.split("\n");
@@ -46,6 +46,14 @@ const Project = ({ project, index }) => {
 							onClick={() => handleClick(project.github)}
 						>
 							<AiFillGithub />
+						</div>
+					)}
+					{project.external && (
+						<div
+							className={styles.linkButton}
+							onClick={() => handleClick(project.external)}
+						>
+							<AiOutlineLink />
 						</div>
 					)}
 				</div>
