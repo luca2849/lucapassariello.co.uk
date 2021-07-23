@@ -35,8 +35,6 @@
                 border: none;
                 border-bottom: 3px solid rgb(136, 136, 136);
                 background: rgb(250, 250, 250);
-                border-top-right-radius: 5px;
-                border-top-left-radius: 5px;
                 // On focus
                 &:focus {
                     outline: none;
@@ -53,7 +51,7 @@
             }
             &[type="submit"] {
                 text-align: center;
-                background: white;
+                background: transparent;
                 border: 3px solid $highlight;
                 color: $highlight;
                 text-transform: uppercase;
@@ -62,7 +60,7 @@
                 font-weight: 500;
                 transition: all 0.3s;
                 &:hover {
-                    border: 2px solid transparent;
+                    border: 3px solid transparent;
                     background: $highlight;
                     color: white;
                     cursor: pointer;
@@ -75,13 +73,5 @@
 @media (max-width: $breakpoint-tablet) {
     .form {
         width: 75%;
-        & > .formGroup {
-            &:first-of-type {
-                & > input {
-                    flex: 0 0 50%;
-                    flex-wrap: wrap;
-                }
-            }
-        }
     }
 }

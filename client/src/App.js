@@ -8,6 +8,7 @@ import Home from "./Pages/Home/Home";
 import MyWork from "./Pages/MyWork/MyWork";
 import MySkills from "./Pages/MySkills/MySkills";
 import Contact from "./Pages/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
 	const [theme, setTheme] = useState(
@@ -30,6 +31,7 @@ function App() {
 					<Route exact path="/skills" component={MySkills} />
 					<Route exact path="/contact" component={Contact} />
 				</Switch>
+				<Footer theme={theme} />
 			</div>
 		</Router>
 	);

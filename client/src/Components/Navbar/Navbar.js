@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {useLocation, useHistory} from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import Logo from "../Logo/Logo";
 
@@ -10,17 +10,15 @@ import { BiMoon, BiSun } from "react-icons/bi";
 const Navbar = ({ changeHandler, theme }) => {
 	const [checked, setChecked] = useState(false);
 
-	const {pathname} = useLocation();
+	const { pathname } = useLocation();
 	const history = useHistory();
 
 	// Reset scroll on page change
 	useEffect(() => {
-		window.scroll({top: 0});
-	}, [pathname])
-	
+		window.scroll({ top: 0 });
+	}, [pathname]);
 
 	const onChange = (e) => {
-		console.log(e);
 		setChecked(!checked);
 		changeHandler(theme === "light" ? "dark" : "light");
 	};
@@ -28,7 +26,10 @@ const Navbar = ({ changeHandler, theme }) => {
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.content}>
-				<div onClick={() => history.push("/")} style={{cursor: "pointer"}}>
+				<div
+					onClick={() => history.push("/")}
+					style={{ cursor: "pointer" }}
+				>
 					<Logo />
 				</div>
 				<div>
