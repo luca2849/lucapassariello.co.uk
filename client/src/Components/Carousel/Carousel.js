@@ -20,7 +20,7 @@ const Carousel = ({ children, width }) => {
 				// If number passed as string
 				const reg = /^\d+$/;
 				if (reg.test(width)) {
-					wid = parseInt(width);
+					wid = parseInt(width, 10);
 				}
 			}
 		}

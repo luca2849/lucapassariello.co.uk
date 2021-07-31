@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./styles/theme.scss";
@@ -31,7 +31,7 @@ function App() {
 					<Route exact path="/skills" component={MySkills} />
 					<Route exact path="/contact" component={Contact} />
 				</Switch>
-				<Footer theme={theme} />
+				<Footer />
 			</div>
 		</Router>
 	);

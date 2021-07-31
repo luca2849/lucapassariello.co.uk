@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import Logo from "../Logo/Logo";
