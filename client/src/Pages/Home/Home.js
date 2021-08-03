@@ -187,6 +187,7 @@ const Home = () => {
 					<div className={styles.info}>
 						{buttons.map((button, i) => (
 							<div
+								key={i}
 								className={styles.button}
 								onClick={() => handleClick(button.link)}
 							>
