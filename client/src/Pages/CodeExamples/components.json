@@ -1,0 +1,23 @@
+[
+    {
+        "name": "carousel",
+        "created": "July 2021",
+        "project": "Personal Portfolio",
+        "desc": "The Carousel component was created to showcase my skills, however upon creating the component, I had other ideas for that section. The component is however still useful and works well, is responsive, and allows for a myriad of different configuration options.",
+        "code": "https://github.com/luca2849/lucapassariello.co.uk/tree/main/client/src/Components/Carousel",
+        "props": [
+            {
+                "name": "width",
+                "desc": "Defines the width of the carousel component",
+                "possible_values": ["75%", "'500px'", "500", "'500'"],
+                "optional": true
+            },
+            {
+                "name": "width",
+                "desc": "Defines the width of the carousel component",
+                "possible_values": ["75%", "'500px'", "500", "'500'"],
+                "optional": true
+            }
+        ]
+    }
+]

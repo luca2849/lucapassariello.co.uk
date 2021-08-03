@@ -12,6 +12,9 @@ const Carousel = ({ children, width }) => {
 	// Function for getting current width (in pixels)
 	const getWidth = useCallback(() => {
 		let wid = width;
+		if (!width) {
+			wid = 500;
+		}
 		if (typeof width === "string") {
 			if (width.split("%").length > 1) {
 				// Calculate percentage widths

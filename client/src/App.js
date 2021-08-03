@@ -9,6 +9,7 @@ import MyWork from "./Pages/MyWork/MyWork";
 import MySkills from "./Pages/MySkills/MySkills";
 import Contact from "./Pages/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import CodeExamples from "./Pages/CodeExamples/CodeExamples";
 
 function App() {
 	const [theme, setTheme] = useState(
@@ -29,6 +30,11 @@ function App() {
 					<Route exact path="/" component={Home} />
 					<Route exact path="/portfolio" component={MyWork} />
 					<Route exact path="/skills" component={MySkills} />
+					<Route
+						exact
+						path="/codeExamples"
+						component={CodeExamples}
+					/>
 					<Route exact path="/contact" component={Contact} />
 				</Switch>
 				<Footer />

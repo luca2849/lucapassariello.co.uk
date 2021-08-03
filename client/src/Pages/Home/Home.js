@@ -3,9 +3,9 @@ import { useHistory } from "react-router-dom";
 
 import styles from "./Home.module.scss";
 
-import { BiServer, BiNetworkChart } from "react-icons/bi";
+import { BiServer, BiNetworkChart, BiCode } from "react-icons/bi";
 import { FaTerminal, FaPencilRuler } from "react-icons/fa";
-import { GiBrain } from "react-icons/gi";
+// import { GiBrain } from "react-icons/gi";
 import { RiMessage2Line } from "react-icons/ri";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { VscChevronDown } from "react-icons/vsc";
@@ -26,10 +26,15 @@ const Home = () => {
 			icon: <FaTerminal />,
 			link: "/portfolio",
 		},
+		// {
+		// 	name: "My Skills",
+		// 	icon: <GiBrain />,
+		// 	link: "/skills",
+		// },
 		{
-			name: "My Skills",
-			icon: <GiBrain />,
-			link: "/skills",
+			name: "Code Examples",
+			icon: <BiCode />,
+			link: "/codeExamples",
 		},
 		{
 			name: "Contact Me",

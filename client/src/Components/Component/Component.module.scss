@@ -1,0 +1,51 @@
+.component {
+    & > .alth3 {
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    & > h4 {
+        margin-top: 3rem;
+    }
+
+    & > hr {
+        margin-bottom: 1rem;
+    }
+
+    // & > .example {
+    //     padding: 1rem;
+    // }
+
+    & > .text {
+        width: 100%;
+    }
+
+    & > .propTable {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+
+        & > thead  {
+            & > tr > th {
+                padding: 2rem;
+                letter-spacing: 1px;
+                background: rgb(233, 233, 233);
+            }
+        }
+
+        & > tbody {
+            & > tr > td > p {
+                margin: 0.25rem 0;
+            }
+
+            & > tr:nth-of-type(2n + 1) {
+                background: rgb(250, 250, 250);
+            }
+
+            & > tr:nth-of-type(2n) {
+                background: rgb(238, 238, 238);
+            }
+        }
+
+    }
+}
