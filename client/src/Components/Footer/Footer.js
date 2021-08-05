@@ -21,7 +21,7 @@ const Footer = () => {
 						<Link to={`/`}>Home</Link>
 						<Link to={`/contact`}>Contact</Link>
 						<Link to={`/portfolio`}>Projects</Link>
-						<Link to={`/skills`}>Skills</Link>
+						<Link to={`/docs`}>Component Docs</Link>
 					</div>
 				</div>
 				<div className={styles.footerGroup}>

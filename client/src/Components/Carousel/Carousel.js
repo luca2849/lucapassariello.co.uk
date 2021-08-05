@@ -4,17 +4,18 @@ import styles from "./Carousel.module.scss";
 
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
-const Carousel = ({ children, width }) => {
+const Carousel = ({ children, width, duration }) => {
 	const [currentPage, setCurrentPage] = useState(1); // Stores current page
 	const [offset, setOffset] = useState(0); // Stores last offset
 	const [style, setStyle] = useState(null); // Stores style obj for element
 	const [actualWidth, setActualWidth] = useState(1000);
+	// Set default duration
+	if (!duration) duration = 300;
+	// Set default width
+	if (!width) width = 500;
 	// Function for getting current width (in pixels)
 	const getWidth = useCallback(() => {
 		let wid = width;
-		if (!width) {
-			wid = 500;
-		}
 		if (typeof width === "string") {
 			if (width.split("%").length > 1) {
 				// Calculate percentage widths
@@ -37,7 +38,7 @@ const Carousel = ({ children, width }) => {
 		setCurrentPage(page);
 		const newOffset = offset + diff * -actualWidth;
 		setStyle({
-			transition: `all 300ms cubic-bezier(0, 0, 0.28, 1) 0s`,
+			transition: `all ${duration}ms cubic-bezier(0, 0, 0.28, 1) 0s`,
 			transform: "matrix(1, 0, 0, 1, " + newOffset + ", 0)",
 		});
 		setOffset(newOffset);
@@ -56,7 +57,7 @@ const Carousel = ({ children, width }) => {
 			// Recalculate Offset
 			const newOffset = -wid * (currentPage - 1);
 			setStyle({
-				transition: `all 300ms cubic-bezier(0, 0, 0.28, 1) 0s`,
+				transition: `all ${duration}ms cubic-bezier(0, 0, 0.28, 1) 0s`,
 				transform: `matrix(1, 0, 0, 1, ${newOffset}, 0)`,
 			});
 			setOffset(newOffset);

@@ -10,3 +10,10 @@
     font-size: 1.05rem;
     line-height: 150%;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .components, .text {
+        width: 90%;
+    }
+}

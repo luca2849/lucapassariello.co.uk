@@ -32,9 +32,9 @@ const Home = () => {
 		// 	link: "/skills",
 		// },
 		{
-			name: "Code Examples",
+			name: "Component Docs",
 			icon: <BiCode />,
-			link: "/codeExamples",
+			link: "/docs",
 		},
 		{
 			name: "Contact Me",

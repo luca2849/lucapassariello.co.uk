@@ -1,6 +1,6 @@
 import Car from "../../Components/Carousel/Carousel";
 
-export default {
+const components = {
 	carousel_str: `<Carousel>
     <Carousel.Item>
         <h3>Page 1</h3>
@@ -16,7 +16,7 @@ export default {
     </Carousel.Item>
 </Carousel>`,
 	carousel: (
-		<Car>
+		<Car width="50%">
 			<Car.Item>
 				<h3>Page 1</h3>
 			</Car.Item>
@@ -32,3 +32,5 @@ export default {
 		</Car>
 	),
 };
+
+export default components;

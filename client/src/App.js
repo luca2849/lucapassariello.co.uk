@@ -30,11 +30,7 @@ function App() {
 					<Route exact path="/" component={Home} />
 					<Route exact path="/portfolio" component={MyWork} />
 					<Route exact path="/skills" component={MySkills} />
-					<Route
-						exact
-						path="/codeExamples"
-						component={CodeExamples}
-					/>
+					<Route exact path="/docs" component={CodeExamples} />
 					<Route exact path="/contact" component={Contact} />
 				</Switch>
 				<Footer />

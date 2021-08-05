@@ -1,4 +1,11 @@
+@import '../../styles/variables.scss';
+
 .component {
+
+    & > .text > p:not(:first-of-type) {
+        margin-top: 0.5rem;
+    }
+
     & > .alth3 {
         text-align: left;
         margin: 1rem 0;
@@ -12,9 +19,9 @@
         margin-bottom: 1rem;
     }
 
-    // & > .example {
-    //     padding: 1rem;
-    // }
+    & > .example {
+        padding: 1rem;
+    }
 
     & > .text {
         width: 100%;
@@ -24,6 +31,8 @@
         width: 90%;
         margin: 0 auto;
         text-align: center;
+        color: $light-page-text;
+        overflow: scroll;
 
         & > thead  {
             & > tr > th {
@@ -34,8 +43,11 @@
         }
 
         & > tbody {
-            & > tr > td > p {
-                margin: 0.25rem 0;
+            & > tr > td {
+                padding: 0.5rem;
+                &  > p {
+                    margin: 0.25rem 0;
+                }
             }
 
             & > tr:nth-of-type(2n + 1) {
@@ -47,5 +59,12 @@
             }
         }
 
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .propTable {
+        width: 100%;
     }
 }
