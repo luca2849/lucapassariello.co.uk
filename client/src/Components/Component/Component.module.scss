@@ -9,6 +9,10 @@
     & > .alth3 {
         text-align: left;
         margin: 1rem 0;
+        & span {
+            float: right;
+            font-size: 1.1rem;
+        }
     }
 
     & > h4 {
@@ -33,6 +37,7 @@
         text-align: center;
         color: $light-page-text;
         overflow: scroll;
+        letter-spacing: 1px;
 
         & > thead  {
             & > tr > th {

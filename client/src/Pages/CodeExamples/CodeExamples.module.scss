@@ -11,18 +11,31 @@
     letter-spacing: 1px;
     font-size: 1.05rem;
     line-height: 150%;
+    & a {
+        text-decoration: none;
+    }
 }
 
 .toc {
     background: $light-page-background;
     color: $light-page-text;
     width: 30%;
-    margin: 2rem auto;
+    margin: 3rem auto;
+}
+
+.componentContainer {
+    &:not(:first-of-type) {
+        margin-top: 4rem;
+    }
 }
 
 
 @media only screen and (max-width: 768px) {
     .components, .text {
+        width: 90%;
+    }
+
+    .toc {
         width: 90%;
     }
 }

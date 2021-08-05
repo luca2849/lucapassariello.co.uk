@@ -1,6 +1,6 @@
-import React, { useRef, createRef } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import samples from "./example_code";
-import components from "./components.json";
 import styles from "./CodeExamples.module.scss";
 import Component from "../../Components/Component/Component";
 import Toc from "../../Components/TableOfContents/TableOfContents";
@@ -26,31 +26,58 @@ const CodeExamples = () => {
 					describing each component, how it was created, how it is
 					used and where it can be found.
 				</p>
+				<p>
+					Everything on this page, and included in the{" "}
+					<Link
+						to={{
+							pathname:
+								"https://github.com/luca2849/lucapassariello.co.uk",
+						}}
+						target="_blank"
+					>
+						GitHub repository for this website
+					</Link>{" "}
+					comes under the MIT license, allowing for unlimited rights
+					to use, copy, modify, merge, publish, distribute,
+					sublicense, and/or sell copies of the software, and to
+					permite persons to whom the software is furnished to do so.
+					Full license is available{" "}
+					<Link
+						to={{
+							pathname:
+								"https://github.com/luca2849/lucapassariello.co.uk/blob/main/LICENSE",
+						}}
+						target="_blank"
+					>
+						here
+					</Link>
+					.
+				</p>
 			</div>
 			<div className={styles.toc}>
 				<Toc>
 					<Toc.List>
-						{components.map((component, index) => (
-							<>
+						{samples.map((sample, index) => (
+							<div key={index}>
 								<Toc.Item
 									onClick={() => scrollToRef(tocRefs[index])}
 								>
-									{component.name[0].toUpperCase() +
-										component.name.substring(1)}
+									{sample.name[0].toUpperCase() +
+										sample.name.substring(1).toLowerCase()}
 								</Toc.Item>
-							</>
+							</div>
 						))}
 					</Toc.List>
 				</Toc>
 			</div>
 			<div className={styles.components}>
-				{components.map((component, index) => (
-					<div ref={setRef}>
-						<Component
-							component={component}
-							samples={samples}
-							textClass={styles.text}
-						/>
+				{samples.map((sample, index) => (
+					<div
+						ref={setRef}
+						className={styles.componentContainer}
+						key={index}
+					>
+						<Component sample={sample} textClass={styles.text} />
 					</div>
 				))}
 			</div>
