@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .components {
     width: 60%;
     margin: 0 auto;
@@ -9,6 +11,13 @@
     letter-spacing: 1px;
     font-size: 1.05rem;
     line-height: 150%;
+}
+
+.toc {
+    background: $light-page-background;
+    color: $light-page-text;
+    width: 30%;
+    margin: 2rem auto;
 }
 
 
