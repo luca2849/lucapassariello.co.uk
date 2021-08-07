@@ -103,7 +103,7 @@ const components = [
 		created: "August 2021",
 		project: "Personal Portfolio",
 		desc: "The Table of Contents component was created to use on this page, so navigation between documentation sections would be easier. Essentially, it is just a different way of formatting a HTML list, with extra styling. \n Because this component is a practical extension of HTML unordered lists, nested lists can be used to show different sections to the table of contents, allowing for more possible use cases.",
-		code: "https://github.com/luca2849/lucapassariello.co.uk/tree/main/client/src/Components/Carousel",
+		code: "https://github.com/luca2849/lucapassariello.co.uk/tree/main/client/src/Components/TableOfContents",
 		props: [
 			{
 				name: "bullets",

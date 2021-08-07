@@ -40,7 +40,7 @@ const CodeExamples = () => {
 					comes under the MIT license, allowing for unlimited rights
 					to use, copy, modify, merge, publish, distribute,
 					sublicense, and/or sell copies of the software, and to
-					permite persons to whom the software is furnished to do so.
+					permit persons to whom the software is furnished to do so.
 					Full license is available{" "}
 					<Link
 						to={{

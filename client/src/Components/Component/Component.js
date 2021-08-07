@@ -1,6 +1,8 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import { CopyBlock, nord } from "react-code-blocks";
+import { Link } from "react-router-dom";
+import { CopyBlock, nord, a11yLight } from "react-code-blocks";
+
+import { FiCode } from "react-icons/fi";
 
 import styles from "./Component.module.scss";
 
@@ -20,6 +22,11 @@ const Component = ({ sample, textClass }) => {
 					<p key={`${paragraph.substring(10)}${i}`}>{paragraph}</p>
 				))}
 			</div>
+			<div className={styles.codeButton}>
+				<Link to={{ pathname: sample.code }} target="_blank">
+					<FiCode />
+				</Link>
+			</div>
 			<h4>Usage</h4>
 			<hr />
 			{sample.examples.map((ex, index) => (
@@ -27,7 +34,11 @@ const Component = ({ sample, textClass }) => {
 					<h4>{ex.name}</h4>
 					<p style={{ marginBottom: "1rem" }}>{ex.desc}</p>
 					<CopyBlock
-						theme={nord}
+						theme={
+							localStorage.getItem("theme") === "light"
+								? nord
+								: a11yLight
+						}
 						language="jsx"
 						text={ex.string}
 						showLineNumbers={true}

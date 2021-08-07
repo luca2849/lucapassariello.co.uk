@@ -15,6 +15,29 @@
         }
     }
 
+    & > .codeButton {
+        display: inline-block;
+        & a {
+            display: inline-block;
+            color: $highlight;
+            padding: 1rem;
+        }
+        & svg {
+            transform: scale(1.5);
+        }
+        border-radius: 20px;
+        background: transparent;
+        border: 2px solid $highlight;
+        transition: all 0.3s;
+        &:hover {
+            border: 2px solid transparent;
+            background: $highlight;
+            & svg {
+                color: white;
+            }
+        }
+    }
+
     & > h4 {
         margin-top: 3rem;
     }
