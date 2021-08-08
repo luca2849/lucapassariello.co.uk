@@ -6,7 +6,9 @@ import Component from "../../Components/Component/Component";
 import Toc from "../../Components/TableOfContents/TableOfContents";
 
 const CodeExamples = () => {
+	// Refs used for scrolling the table of contents
 	const tocRefs = [];
+
 	const setRef = (ref) => {
 		tocRefs.push(ref);
 	};

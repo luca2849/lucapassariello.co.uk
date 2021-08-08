@@ -5,10 +5,41 @@
     font-family: sans-serif;
 }
 
+.completed {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+        transform: scale(5);
+        margin: 4rem;
+        transition: all 0.3s;
+        fill: rgb(93, 204, 59);
+    }
+
+    & p, h4 {
+        font-size: 110%;
+    }
+
+    & a {
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s;
+        &:hover {
+            border-bottom: 2px solid $highlight;
+        }
+    }
+}
+
 .form {
     width: 30%;
     margin: 0 auto;
     padding: 1rem;
+    background: $light-page-background;
+    border-radius: 10px;
     & > *:focus {
         outline: none; 
     }

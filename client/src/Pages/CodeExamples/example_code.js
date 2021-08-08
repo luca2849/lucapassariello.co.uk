@@ -26,11 +26,11 @@ const components = [
 				default: "300",
 			},
 		],
-		how: "The main challenge when creating the Carousel was how to hide the non-displayed slides without affecting the layout of the rest of the page. The solution found was to render all slides (items) as seperate flex items inside a relativley positioned container, with a fixed (or percentage-based) width. \n When changing slide, via the arrows or through the slide selection buttons, the distance to offset the container by is calculated using the width of the Carousel, and the entire Carousel is then transformed by that new offset, getting the user to the correct page. \n Another key feature of this Carousel is its responsiveness. I wanted the user to be able to set a variable width for the Carousel, which they can do via the width prop. This caused some issues when resizing the window, which was solved with an event listener, checking for a change in window size, and recalculating the offsets when this occurs.",
+		how: "The main challenge when creating the Carousel was how to hide the non-displayed slides without affecting the layout of the rest of the page. The solution found was to render all slides (items) as seperate flex items inside a relativley positioned container, with a fixed (or percentage-based) width. \n When changing slide, via the arrows or through the slide selection buttons, the distance to offset the container by is calculated using the width of the Carousel, and the entire Carousel is then transformed by that new offset, getting the user to the correct page. \n Another key feature of this Carousel is its responsiveness. I wanted the user to be able to set a variable width for the Carousel, which they can do via the width prop. This caused some issues when resizing the window, which was solved with an event listener, checking for a change in window size, and recalculating the offsets when this occurs. If a width which is not recognised is passed as a prop, the default size of 500px is used.",
 		examples: [
 			{
 				name: "Basic",
-				desc: "This is a basic implementation of the carousel component.",
+				desc: "This is a basic implementation of the carousel component, which uses a default width of 500px.",
 				string: `<Carousel>
     <Carousel.Item>
         <h3>Page 1</h3>
@@ -122,7 +122,7 @@ const components = [
 				default: "false",
 			},
 		],
-		how: "",
+		how: "The table of contents (TOC) component is rather basic, as it is essentially an implementation of HTML lists, with additional styling and easy customisation options. \n Using the same React component dot notation method as the Carousel, the TOC component can be used in combination with TOC.List and TOC.Item to provide the full usage of regular HTML lists, with props to control the display and styling of the lists. \n The code for this component, which is available via the button near the top of this section, is quite self-explanitory, and an example implementation with React refs for scrolling, used on this page, is available in the repository for this site.",
 		examples: [
 			{
 				name: "Basic",

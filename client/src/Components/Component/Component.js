@@ -11,10 +11,6 @@ const Component = ({ sample, textClass }) => {
 		<div className={styles.component}>
 			<h3 className={styles.alth3}>
 				{`${sample.name[0].toUpperCase()}${sample.name.substring(1)}`}{" "}
-				{/* -{" "}
-				<Link to={{ pathname: component.code }} target="_blank">
-					Code
-				</Link> */}
 				<span>{sample.created}</span>
 			</h3>
 			<div className={`${textClass} ${styles.text}`}>
@@ -49,34 +45,36 @@ const Component = ({ sample, textClass }) => {
 
 			<h4>Props</h4>
 			<hr />
-			<table className={styles.propTable}>
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Short Description</th>
-						<th>Data Type</th>
-						<th>Possible Values</th>
-						<th>Optional?</th>
-						<th>Default Value</th>
-					</tr>
-				</thead>
-				<tbody>
-					{sample.props.map((prop, i) => (
-						<tr key={`${prop.name}${i}`}>
-							<td>{prop.name}</td>
-							<td>{prop.desc}</td>
-							<td>{prop.type}</td>
-							<td className={styles.vertList}>
-								{prop.possible_values.map((val, i) => (
-									<p key={`${val}${i}`}>{val}</p>
-								))}
-							</td>
-							<td>{prop.optional ? "Yes" : "No"}</td>
-							<td>{prop.default}</td>
+			<div className={styles.tableContainer}>
+				<table className={styles.propTable}>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Short Description</th>
+							<th>Data Type</th>
+							<th>Possible Values</th>
+							<th>Optional?</th>
+							<th>Default Value</th>
 						</tr>
-					))}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						{sample.props.map((prop, i) => (
+							<tr key={`${prop.name}${i}`}>
+								<td>{prop.name}</td>
+								<td>{prop.desc}</td>
+								<td>{prop.type}</td>
+								<td className={styles.vertList}>
+									{prop.possible_values.map((val, i) => (
+										<p key={`${val}${i}`}>{val}</p>
+									))}
+								</td>
+								<td>{prop.optional ? "Yes" : "No"}</td>
+								<td>{prop.default}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
 			<h4>How it Works</h4>
 			<hr />
 			<div className={`${textClass} ${styles.text}`}>
