@@ -1,78 +1,80 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .footer {
-    background: $highlight;
-    padding: 1rem;
-    margin-top: 2rem;
-    color: white;
-    & > .footerTop {
-        padding: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    & .footerGroup {
-        text-align: center;
-        letter-spacing: 1.5px;
-        & p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-        }
-    }
+	background: $highlight;
+	padding: 1rem;
+	margin-top: 2rem;
+	color: white;
+	& > .footerTop {
+		padding: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	& .footerGroup {
+		text-align: center;
+		letter-spacing: 1.5px;
+		& p {
+			margin-bottom: 1.5rem;
+			font-size: 1.1rem;
+			text-transform: uppercase;
+		}
+	}
 
-    & > .map {
-        width: 90%;
-        height: 250px;
-        background: white;
-        margin: 3rem auto;
+	& > .map {
+		width: 90%;
+		height: 250px;
+		background: white;
+		margin: 3rem auto;
+		&.map-container {
+			height: 100%;
+		}
+		& .marker {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: rgba(255, 82, 82, 0.8);
+			box-shadow: 0px 0px 0px 0px rgba(255, 82, 82, 1);
+			&:hover {
+				cursor: pointer;
+				animation: pulse 1s infinite;
+			}
+		}
+	}
 
-        & .marker {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: rgba(255, 82, 82, 0.8);
-            box-shadow: 0px 0px 0px 0px rgba(255, 82, 82, 1);
-            &:hover {
-                cursor: pointer;
-                animation: pulse 1s infinite;
-            }
-        }
-    }
+	& > .footerBottom {
+		text-align: center;
+	}
 
-    & > .footerBottom {
-        text-align: center;
-    }
-
-    & .links {
-        & > a {
-            margin: 1rem 0;
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding-bottom: 0.25rem;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-            &:hover {
-                border-bottom: 2px solid white;
-            }
-        }
-    }
+	& .links {
+		& > a {
+			margin: 1rem 0;
+			display: block;
+			color: white;
+			text-decoration: none;
+			padding-bottom: 0.25rem;
+			border-bottom: 2px solid transparent;
+			transition: all 0.3s;
+			&:hover {
+				border-bottom: 2px solid white;
+			}
+		}
+	}
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(0.95);
-        box-shadow: 0px 0px 0px 0px rgba(255, 82, 82, 0.7);
-    }
-      
-    70% {
-        transform: scale(1);
-        box-shadow: 0px 0px 0px 10px rgba(255, 82, 82, 0);
-    }
-      
-    100% {
-        transform: scale(0.95);
-        box-shadow: 0px 0px 0px 0px rgba(255, 82, 82, 0);
-    }
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0px 0px 0px 0px rgba(255, 82, 82, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0px 0px 0px 10px rgba(255, 82, 82, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0px 0px 0px 0px rgba(255, 82, 82, 0);
+	}
 }

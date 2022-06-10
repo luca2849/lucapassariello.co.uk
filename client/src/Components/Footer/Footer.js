@@ -1,16 +1,24 @@
-import React, { useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import mapboxgl from "mapbox-gl";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
-	const [viewport, setViewport] = useState({
-		width: 400,
-		height: 400,
-		latitude: 51.43865023294366,
-		longitude: -3.1738439421791376,
-		zoom: 12,
+	mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
+	const mapContainer = useRef(null);
+	const map = useRef(null);
+	// 51.43868922526807, -3.1737732513490617
+	const [lng] = useState(-3.1737732513490617);
+	const [lat] = useState(51.43868922526807);
+	const [zoom] = useState(12);
+	useEffect(() => {
+		if (map.current) return; // initialize map only once
+		map.current = new mapboxgl.Map({
+			container: mapContainer.current,
+			style: "mapbox://styles/luca2849/ck963lzou5e8n1ip9o6akrymt",
+			center: [lng, lat],
+			zoom: zoom,
+		});
 	});
 	return (
 		<div className={styles.footer}>
@@ -46,26 +54,10 @@ const Footer = () => {
 			</div>
 			<h2>Currently Based in Penarth, Wales</h2>
 			<div className={styles.map}>
-				<ReactMapGL
-					{...viewport}
-					width="100%"
-					height="100%"
-					mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-					onViewportChange={(viewport) => setViewport(viewport)}
-					mapStyle="mapbox://styles/luca2849/ck963lzou5e8n1ip9o6akrymt"
-				>
-					<Marker
-						longitude={-3.1738439421791376}
-						latitude={51.43865023294366}
-						offsetLeft={-10}
-						offsetTop={-15}
-					>
-						<div className={styles.marker}></div>
-					</Marker>
-				</ReactMapGL>
+				<div ref={mapContainer} style={{ height: "100%" }} />
 			</div>
 			<div className={styles.footerBottom}>
-				<p>Copyright &copy; Luca Passariello 2021</p>
+				<p>Copyright &copy; Luca Passariello 2022</p>
 			</div>
 		</div>
 	);
