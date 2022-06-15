@@ -1,5 +1,8 @@
+import { FaHeart } from "react-icons/fa";
+
 import Car from "../../Components/Carousel/Carousel";
 import Toc from "../../Components/TableOfContents/TableOfContents";
+import ExampleButton from "../../Components/ExampleButton/ExampleButton";
 
 const components = [
 	{
@@ -174,6 +177,122 @@ const components = [
 							</Toc.List>
 						</Toc.List>
 					</Toc>
+				),
+			},
+		],
+	},
+	{
+		name: "Button",
+		created: "June 2022",
+		project: "DevChallenges.IO",
+		desc: "In June of 2022, I came across a website which contained lots of challenges for aspiring developers, called devChallenges.io. One of the front-end development tasks was to create a Buttons component, which satisfied all user stories provided. \n I created a basic deployment of this feature, which can be found at https://buttons.fe.lucapassariello.co.uk.",
+		code: "https://github.com/luca2849/lucapassariello.co.uk/tree/main/client/src/Components/ExampleButton",
+		props: [
+			{
+				name: "variant",
+				desc: "Determines what variant the button is.",
+				type: "String",
+				possible_values: ["outline", "text"],
+				optional: true,
+				default: "None",
+			},
+			{
+				name: "disabled",
+				desc: "Determines whether a button is disabled.",
+				type: "Boolean",
+				possible_values: ["true", "false"],
+				optional: true,
+				default: "false",
+			},
+			{
+				name: "startIcon",
+				desc: "An icon to be displayed before the button text.",
+				type: "Component",
+				possible_values: ["<i></i>", "<FaHeart />"],
+				optional: true,
+				default: "None",
+			},
+			{
+				name: "endIcon",
+				desc: "An icon to be displayed after the button text.",
+				type: "Component",
+				possible_values: ["<i></i>", "<FaHeart />"],
+				optional: true,
+				default: "None",
+			},
+			{
+				name: "color",
+				desc: "Determines the colour scheme of the button.",
+				type: "String",
+				possible_values: ["primary", "default", "secondary", "danger"],
+				optional: true,
+				default: "default",
+			},
+			{
+				name: "size",
+				desc: "Determines the font size and padding of the button.",
+				type: "String",
+				possible_values: ["sm", "md", "lg"],
+				optional: true,
+				default: "sm",
+			},
+		],
+		how: "This component is not too complex, the hardest part was working out which props should take precedence over others in terms of styling, for example, what should happen if both a variant and a color are provided. \n This was a fairly quick component to build, and satisfied the provided user stories well. This was my first time experimenting with a component which takes in lots of props, so I created a utility function for sanitising the props passed into the component, and replacing any missing ones with defaults.",
+		examples: [
+			{
+				name: "Default",
+				desc: "This is the default implementation of the Button component.",
+				string: `<Button>Default</Button>`,
+				component: <ExampleButton>Default</ExampleButton>,
+			},
+			{
+				name: "Outlined",
+				desc: "This version consists of a button with a solid outline, and an opaque hover-able background.",
+				string: `<Button variant="outline">Default</Button>`,
+				component: (
+					<ExampleButton variant="outline">Default</ExampleButton>
+				),
+			},
+			{
+				name: "Resizing",
+				desc: "This version shows the three sizes made available to users. They are also customisable with custom CSS.",
+				string: `<Button size="lg">Default</Button>`,
+				component: <ExampleButton size="lg">Default</ExampleButton>,
+			},
+			{
+				name: "Disabled",
+				desc: "This version shows the three sizes made available to users. They are also customisable with custom CSS.",
+				string: `<Button disabled={true}>Default</Button>`,
+				component: (
+					<ExampleButton disabled={true}>Default</ExampleButton>
+				),
+			},
+			{
+				name: "Coloured",
+				desc: "There are also four possible colour schemes to pick from, each with their own custom hover colours.",
+				string: `<Button color="danger">Default</Button>`,
+				component: (
+					<ExampleButton color="danger">Default</ExampleButton>
+				),
+			},
+			{
+				name: "Coloured Disabled",
+				desc: "There are also four possible colour schemes to pick from, each with their own custom hover colours.",
+				string: `<Button color="secondary" disabled={true}>Default</Button>`,
+				component: (
+					<ExampleButton color="secondary" disabled>
+						Default
+					</ExampleButton>
+				),
+			},
+			{
+				name: "Button with Start Icon",
+				desc: "There are also four possible colour schemes to pick from, each with their own custom hover colours.",
+				string: `<Button color="primary" startIcon={<FaHeart />}>Default</Button>`,
+				component: (
+					<ExampleButton color="primary" startIcon={<FaHeart />}>
+						Default
+					</ExampleButton>
 				),
 			},
 		],
