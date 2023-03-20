@@ -74,11 +74,12 @@ const Home = () => {
 					<br />
 					<div className={styles.textblock}>
 						<p>
-							Hi, I'm Luca, I'm currently a masters student in
-							Advanced Computer Science at Cardiff University,
-							graduating in the summer of 2022. I completed my
-							bachelors in Computer Science in 2021, graduating
-							with first class honours.
+							Hi, I'm Luca, I'm currently a software engineer at
+							Inspiretec in Cardiff. I completed my masters degree
+							in Advanced Computer Science in September 2022, and
+							my bachelors in Computer Science in 2021, graduating
+							with a distinction and first class honours
+							respectively.
 						</p>
 						<p>
 							Web development has always been one of my favorite

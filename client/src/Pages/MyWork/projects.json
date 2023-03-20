@@ -1,72 +1,85 @@
 [
-    {
-        "name": "Old Portfolio",
-        "link": "https://old.lucapassariello.co.uk",
-        "cleanLink": "old.lucapassariello.co.uk",
-        "desc": "My previous web development portfolio.",
-        "img": "lucapassariello.png",
-        "tech": ["PHP", "Twig"]
-    },
-    {
-        "name": "MyBookChoice",
-        "link": "https://mybookchoice.lucapassariello.co.uk",
-        "cleanLink": "mybookchoice.lucapassariello.co.uk",
-        "desc": "My undergrad final year project. A fully-functional book recommender and social network. My reports, spreadsheets, and ethical approval are also available via the external link.",
-        "external": "https://pats.cs.cf.ac.uk/!archive_desc?p=1670",
-        "img": "mybookchoice.png",
-        "github": "https://github.com/luca2849/mybookchoice",
-        "tech": ["NodeJS", "React", "MongoDB", "SocketIO"]
-    },
-    {
-        "name": "Wikiraces",
-        "link": "https://wikiraces.lucapassariello.co.uk",
-        "cleanLink": "wikiraces.lucapassariello.co.uk",
-        "desc": "A site for creating and playing Wikipedia races.",
-        "img": "wikiraces.png",
-        "github": "https://github.com/luca2849/wikiraces.lucapassariello.co.uk",
-        "tech": ["NodeJS", "EJS", "SocketIO", "MongoDB"]
-    },
-    {
-        "name": "Pathfinding",
-        "link": "https://pathfinding.lucapassariello.co.uk",
-        "cleanLink": "pathfinding.lucapassariello.co.uk",
-        "desc": "A small A* path finding p5js implementation. This is a completely static implementation with no back-end, and is meant to demonstrate the applications of theory and algorithms. \n This site is live, and the GitHub repository is publically available.",
-        "img": "pathfinding.png",
-        "github": "https://github.com/luca2849/astar-pathfinding",
-        "tech": ["p5.js"]
-    },
-    {
-        "name": "MySpotifyStats",
-        "link": "https://myspotifystats.com",
-        "cleanLink": "myspotifystats.com",
-        "desc": "A website for checking various features of a Spotify account, using the Spotify API.",
-        "img": "myspotifystats.png",
-        "github": "https://github.com/luca2849/myspotifystats.com",
-        "tech": ["Python Flask", "Jinja"]
-    },
-    {
-        "name": "Victoria Nursery",
-        "link": "https://victorianursery.org",
-        "cleanLink": "victorianursery.org",
-        "desc": "Website for a small nursery based in Penarth.",
-        "img": "victorianursery.png",
-        "tech": ["NodeJS", "Pug"]
-    },
-    {
-        "name": "React Roulette",
-        "link": "https://roulette-demo.lucapassariello.co.uk",
-        "cleanLink": "roulette-demo.lucapassariello.co.uk",
-        "desc": "A proof-of-concept React application for playing a static roulette game.",
-        "img": "roulette-demo.png",
-        "github": "https://github.com/luca2849/react-roulette",
-        "tech": ["React"]
-    },
-    {
-        "name": "Projects Site",
-        "link": "https://projects.lucapassariello.co.uk",
-        "cleanLink": "projects.lucapassariello.co.uk",
-        "desc": "A website containing information about my projects, including technologies used.",
-        "img": "projects.jpg",
-        "tech": ["React", "NextJS", "MySQL"]
-    }
+	{
+		"name": "MySpotifyStats",
+		"link": "https://myspotifystats.com",
+		"cleanLink": "myspotifystats.com",
+		"desc": "A website for checking various features of a Spotify account, using the Spotify API. This site is used by an average of 1500 users monthly, and has had over 60,000 users since its creation.",
+		"img": "myspotifystats.png",
+		"github": "https://github.com/luca2849/myspotifystats.com",
+		"tech": ["Python Flask", "Jinja"]
+	},
+	{
+		"name": "Masters Dissertation",
+		"link": "https://pats.cs.cf.ac.uk/@archive_file?p=2621&n=final&f=1-report.pdf&SIG=be3526bfdc52f1e9b74b8eef7b09f94f324dda299081d8fafd7d675bce86959d",
+		"desc": "My postgrad dissertation undertaken with the Crime and Security Research Institute of Cardiff. My aim was to analyse the topical and political makeup of the r/conspiracy subreddit. This resulted in a political classifier which was able to differentiate between left and right wing text.",
+		"external": "https://pats.cs.cf.ac.uk/!archive_desc?p=2621",
+		"img": "masters.png",
+		"tech": [
+			"Machine Learning",
+			"Natural Language Processing",
+			"Data Analytics",
+			"Python"
+		]
+	},
+	{
+		"name": "MyBookChoice",
+		"link": "https://mybookchoice.lucapassariello.co.uk",
+		"cleanLink": "mybookchoice.lucapassariello.co.uk",
+		"desc": "My undergrad final year project. A fully-functional book recommender and social network. My reports, spreadsheets, and ethical approval are also available via the external link.",
+		"external": "https://pats.cs.cf.ac.uk/!archive_desc?p=1670",
+		"img": "mybookchoice.png",
+		"github": "https://github.com/luca2849/mybookchoice",
+		"tech": ["NodeJS", "React", "MongoDB", "SocketIO"]
+	},
+	{
+		"name": "Wikiraces",
+		"link": "https://wikiraces.lucapassariello.co.uk",
+		"cleanLink": "wikiraces.lucapassariello.co.uk",
+		"desc": "A site for creating and playing Wikipedia races.",
+		"img": "wikiraces.png",
+		"github": "https://github.com/luca2849/wikiraces.lucapassariello.co.uk",
+		"tech": ["NodeJS", "EJS", "SocketIO", "MongoDB"]
+	},
+	{
+		"name": "Pathfinding",
+		"link": "https://pathfinding.lucapassariello.co.uk",
+		"cleanLink": "pathfinding.lucapassariello.co.uk",
+		"desc": "A small A* path finding p5js implementation. This is a completely static implementation with no back-end, and is meant to demonstrate the applications of theory and algorithms. \n This site is live, and the GitHub repository is publicly available.",
+		"img": "pathfinding.png",
+		"github": "https://github.com/luca2849/astar-pathfinding",
+		"tech": ["p5.js"]
+	},
+	{
+		"name": "Victoria Nursery",
+		"link": "https://victorianursery.org",
+		"cleanLink": "victorianursery.org",
+		"desc": "Website for a small nursery based in Penarth.",
+		"img": "victorianursery.png",
+		"tech": ["NodeJS", "Pug"]
+	},
+	{
+		"name": "React Roulette",
+		"link": "https://roulette-demo.lucapassariello.co.uk",
+		"cleanLink": "roulette-demo.lucapassariello.co.uk",
+		"desc": "A proof-of-concept React application for playing a static roulette game.",
+		"img": "roulette-demo.png",
+		"github": "https://github.com/luca2849/react-roulette",
+		"tech": ["React"]
+	},
+	{
+		"name": "Projects Site",
+		"link": "https://projects.lucapassariello.co.uk",
+		"cleanLink": "projects.lucapassariello.co.uk",
+		"desc": "A website containing information about my projects, including technologies used.",
+		"img": "projects.jpg",
+		"tech": ["React", "NextJS", "MySQL"]
+	},
+	{
+		"name": "Old Portfolio",
+		"link": "https://old.lucapassariello.co.uk",
+		"cleanLink": "old.lucapassariello.co.uk",
+		"desc": "My previous web development portfolio.",
+		"img": "lucapassariello.png",
+		"tech": ["PHP", "Twig"]
+	}
 ]
